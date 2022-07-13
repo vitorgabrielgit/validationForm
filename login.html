@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <title>Login</title>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--folhas de estilos-->
+    <link rel="stylesheet" type="text/css" href="../assents/_css/root.css">
+    <link rel="stylesheet" type="text/css" href="../assents/_css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assents/_css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="./assents/_css/media.css">
+
+    <!--icon-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="shortcut icon" href="./assents/favicon.ico" type="image/x-icon">
+
+    <!-- scripts -->
+    <script src="./assents/js/scripts.js" defer></script>
+
+</head>
+<body>
+        <main id="allPag">
+            <div id="barLoad" class="barLoad"></div>
+
+            <section class="left-box">
+                <!-- imports -->
+            </section>
+            <section class="rigth-box">
+                <form id="formMain" action="#">
+                    <p id="errorLogin">Preencha todos os campos antes de enviar</p>
+                    <input type="text" placeholder="Nome" class="inputForm inputName" id="formName" spellcheck="false"><br>
+                    <input type="email" placeholder="Email" class="inputForm inputEmail" id="formEmail" spellcheck="false"><br>
+                    <input type="password" placeholder="Password" class="inputForm inputPassword" id="formPassword" spellcheck="false"><br>
+                    <input type="text" placeholder="Endereço" class="inputForm inputMsgPoditiva" id="formMsgPositivo" spellcheck="false"><br>
+                    <a class="linkMsgPositiva" href="#">Por quê pedimos essas informações</a><br>
+
+                    <button type="button" id="btnSend">Cadastrar</button>
+
+                    <br>
+
+                    <button type="button" id="skip">Pular</button>
+                </form>
+            </section>
+        </main>
+</body>
+</html>

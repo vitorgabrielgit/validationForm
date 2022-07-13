@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Vitor</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./assents/favicon.ico" type="image/x-icon">
+
+    <script src="./assents/js/scripts.js" defer></script>
+    <style>
+        :root
+        {
+            --color-background: rgb(187, 187, 187);
+            --color-primary: rgb(62, 62, 62);
+        }
+        *
+        {
+            font-family: monospace, sans-serif, Arial, Helvetica;
+            color: var(--color-primary);
+        }
+        body
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+
+            background: var(--color-background);
+        }
+        h1::after
+        {
+            content: '|';
+            margin-left: -2px;
+            opacity: 1;
+            animation: pulse .7s infinite;
+            color: #000;
+        }
+        @keyframes pulse
+        {
+            0%,100%
+            {
+                opacity: 0;
+            }
+            50%
+            {
+                opacity: 1;
+            }
+        }
+
+        /* main pag */
+        #allPag
+        {
+            
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            background: #fff;
+
+            margin-left: -200%;
+
+            transition: 5s;
+
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <section id="allPag">
+
+    </section>
+    <script>
+            
+            function ConsoleElements(elements)
+        {
+            const textConsole1 = elements.innerHTML.split('');
+            elements.innerHTML = '',
+            textConsole1.forEach((letra, i) => {
+                setTimeout(() => {
+                    elements.innerHTML += letra
+                }, 130 * i);
+            });
+
+        }
+
+
+        const textConsole1 = document.querySelector("h1");
+        textConsole1.innerHTML = "I'am Vitor"
+        ConsoleElements(textConsole1);
+        setTimeout(() => {
+            textConsole1.innerHTML = 'Welcome to my website';
+            ConsoleElements(textConsole1)
+            setTimeout(() => {
+                let pag = document.getElementById('allPag');
+                pag.style.marginLeft = '0%'
+            }, 3000)
+        }, 2000)
+
+    </script>
+</body>
+</html>
